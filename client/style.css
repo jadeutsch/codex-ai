@@ -1,21 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Alegreya Sans", sans-serif;
+  font-family: "Source Code Pro", monospace;
 }
 
 body {
-  background: #343541;
+  background: #353535;
 }
 
 #app {
   width: 100vw;
   height: 100vh;
-  background: #343541;
-
+  background: #353535;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,14 +26,11 @@ body {
   width: 100%;
   height: 100%;
   overflow-y: scroll;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
-
   padding-bottom: 20px;
   scroll-behavior: smooth;
 }
@@ -50,14 +46,13 @@ body {
 }
 
 .ai {
-  background: #40414f;
+  background: #525252;
 }
 
 .chat {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -68,16 +63,16 @@ body {
   width: 36px;
   height: 36px;
   border-radius: 5px;
-
-  background: #5436da;
-
+  background: #284b63;
+  box-shadow: 0 0 6px #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .ai .profile {
-  background: #10a37f;
+  background: #3c6e71;
+  box-shadow: 0 0 6px #fff;
 }
 
 .profile img {
@@ -88,10 +83,8 @@ body {
 
 .message {
   flex: 1;
-
-  color: #dcdcdc;
+  color: #fff;
   font-size: 20px;
-
   max-width: 100%;
   overflow-x: scroll;
 
@@ -102,7 +95,6 @@ body {
    * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
   */
   white-space: pre-wrap;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -117,8 +109,7 @@ form {
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px;
-  background: #40414f;
-
+  background: #878787;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -126,15 +117,17 @@ form {
 
 textarea {
   width: 100%;
-
   color: #fff;
   font-size: 18px;
-
   padding: 10px;
   background: transparent;
   border-radius: 5px;
   border: none;
   outline: none;
+}
+
+textarea::placeholder {
+  color: #e5e5e5;
 }
 
 button {
