@@ -82,7 +82,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch data from the server for the AI response
-  const response = await fetch("http://localhost:5000", {
+  const response = await fetch("https://codex-ai-st01.onrender.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
