@@ -44,7 +44,7 @@ function generateUID() {
 // function to generate color variation between user and AI
 function chatStripe(isAi, value, uId) {
   return `
-    <div class="wrapper ${isAi && "ai"}>
+    <div class="wrapper ${isAi && "ai"}">
       <div class="chat">
         <div class="profile">
           <img 
@@ -52,9 +52,7 @@ function chatStripe(isAi, value, uId) {
             alt="${isAi ? "bot" : "user"}" 
           />
         </div>
-        <div class="message" id="${uId}">
-          ${value}
-        </div>
+        <div class="message" id="${uId}">${value}</div>
       </div>
     </div> 
     `;
@@ -82,6 +80,32 @@ const handleSubmit = async (e) => {
   const messageDiv = document.getElementById(uniqueId);
 
   loader(messageDiv);
+
+  // fetch data from the server for the AI response
+  const response = await fetch("http://localhost:5000", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      prompt: data.get("prompt"),
+    }),
+  });
+
+  clearInterval(loadInterval);
+  messageDiv.innerHTML = "";
+
+  if (response.ok) {
+    const data = await response.json();
+    const parsedData = data.bot.trim();
+
+    text(messageDiv, parsedData);
+  } else {
+    const error = await response.text();
+
+    messageDiv.innerHTML = "Something went wrong!";
+    alert(error);
+  }
 };
 
 form.addEventListener("submit", handleSubmit);
