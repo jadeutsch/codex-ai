@@ -1,0 +1,28 @@
+{
+  "name": "codex-ai",
+  "version": "1.0.0",
+  "description": "A CodeGPT app",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadeutsch/codex-ai.git"
+  },
+  "author": "Jeff Deutsch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadeutsch/codex-ai/issues"
+  },
+  "homepage": "https://github.com/jadeutsch/codex-ai#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "openai": "^3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
