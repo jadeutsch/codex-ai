@@ -13,6 +13,7 @@
 
 body {
   background: #353535;
+  height: 100vh;
   height: var(--app-height);
 }
 
