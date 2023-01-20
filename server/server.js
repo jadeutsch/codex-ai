@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", async (req, res) => {
-  res.status(200).send({ message: "Hello from Code-X" });
+  res.status(200).send({ message: "Hello from Mr. Know-It-All" });
 });
 
 app.post("/", async (req, res) => {
