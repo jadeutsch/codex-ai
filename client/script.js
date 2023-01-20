@@ -4,13 +4,6 @@ import user from "./assets/user.svg";
 const form = document.querySelector("form");
 const chatContainer = document.querySelector("#chat_container");
 
-const appHeight = () => {
-  const app = document.documentElement;
-  app.style.setProperty(" --app-height", `${window.innerHeight}px`);
-};
-window.addEventListener("resize", appHeight);
-appHeight();
-
 let loadInterval;
 
 // function to generate ellipses as if AI is thinking
